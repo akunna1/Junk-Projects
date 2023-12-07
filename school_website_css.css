@@ -1,0 +1,379 @@
+* {
+    font-family: "Goudy Old Style", "Garamond", serif; /* Universal font */
+}
+
+* {
+    background-color: floralwhite; /* Universal background color */
+}
+
+/* Style for the table of contents */
+    .toc {
+        color: black;
+        background-color: floralwhite;
+        border: 2px dashed grey;
+        border-radius: 15px;
+        text-align: left;
+        margin: 10px;
+        font: inherit;
+        float: left; /* Float the table of contents to the left */
+    }
+
+/* Style for the Navigate title */
+    .toc h2 {
+        margin: 10px;
+        text-align: left
+    }
+
+/* Style for the navigation buttons */
+    .tablink {
+        background-color: wheat; /* Color for shading */
+        color: black; /* Color for font */
+        cursor: pointer;
+        border-color: black;
+        display: block; /* Make buttons a block-level element */
+        margin: 10px; /* Add some margin between buttons */
+    }
+
+    .tablink:hover {
+        background-color: #A0522D; /* Hover color */
+    }
+
+/* Style for the image 1, image of students */
+    #img1 {
+        float: left; /* Float the image to the left */
+        margin-right: 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        clear: left; /* Clear the float */
+        }
+
+ /* Style for the image 2, image of University*/
+    #img2 {
+        float: left; /* Float the image to the center */
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 1px;
+        clear: center; /* Clear the float */
+        }
+
+    /* Style for the container div */
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+    
+    /* Style for Image 3 */
+        #img3 {
+            margin-left: 100px;
+            margin-right: 165px;
+        }
+
+        .btn {
+            color: black;
+            background-color: lightgray;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: inherit; /* Inheriting the font size from the universal styles */
+            transition: all 0.3s;
+            display: inline-block; /* Ensuring the button takes only as much width as needed */
+            padding: 5px 10px;
+            text-decoration: none; /* Removing underline from the link */
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5); /* Outset shadow */
+        }
+        
+        .btn:hover {
+            color: black;
+            transform: translateY(-10px);
+            background-color: rosybrown;
+        }
+       
+        .btn:hover a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: rosybrown;
+            color: inherit; /* Inherit text color from the parent */
+        }
+        
+        .btn a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: lightgray;
+            color: inherit; /* Inherit text color from the parent */
+        }
+
+        /* Style for the horizontal line */
+            hr {
+            border: none; /* Remove the default line */
+            background: linear-gradient(to right, maroon, rosybrown, gainsboro); /* Use a gradient as the background */
+            height: 2px; /* Set the height to make it bold */
+        }
+        
+        table {
+            width: 55%;
+            border-collapse: collapse;
+            margin: 0 auto; /* Center the table horizontally */ 
+            table-layout: fixed;
+        }
+
+        td {
+            border: 3px solid floralwhite;
+            padding: 15px;
+            background-color: darkseagreen;
+            width: 33.33%;
+        }
+
+        td a {
+            text-decoration: none; /* Remove hyperlink underline */
+            background-color: DarkSeaGreen;
+            color: black; /* Set font color to black */
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            background-color: DarkSeaGreen;
+        }
+
+        td:hover {
+            background-color: DarkOliveGreen;
+
+        }
+
+        td:hover a {
+            background-color: DarkOliveGreen; /* Change color on hover */
+        }
+
+        
+        .btn2 {
+            color: black;
+            background-color: lightpink;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: inherit; /* Inherit the font size from the universal styles */
+            transition: all 0.3s;
+            display: inline-block; /* Ensure the button takes only as much width as needed */
+            padding: 5px 10px; /* Add padding to the button */
+            text-decoration: none; /* Remove underline from the link */
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5); /* Outset shadow */
+        }
+        
+        .btn2:hover {
+            color: black;
+            transform: translateY(-10px);
+            background-color: darkseagreen;
+        }
+       
+        .btn2:hover a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: darkseagreen;
+            color: inherit; /* Inherit text color from the parent */
+        }
+        
+        .btn2 a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: lightpink;
+            color: inherit; /* Inherit text color from the parent */
+        }
+
+        #hyperlink {
+            text-decoration: underline;
+            color: purple; 
+            background-color: transparent;
+        }
+
+        #hyperlink2 {
+            text-decoration: underline;
+            color: maroon; 
+            background-color: transparent;
+        }
+        
+
+        #brown_table {
+            width: 55%;
+            border-collapse: collapse;
+            margin: 0 auto; /* Center the table horizontally */
+            table-layout: fixed;
+        }
+        
+        #brown_table td {
+            border: 2px solid rosybrown;
+            padding: 15px;
+            background-color: #f4e3d3;
+            width: 33.33%;
+        }
+        
+        #brown_table a {
+            text-decoration: none;
+            color: black;
+            background-color: #f4e3d3;
+        }
+
+        
+        #brown_table2 {
+            width: 70%;
+            border-collapse: collapse;
+            margin: 0 auto; /* Center the table horizontally */
+            table-layout: fixed;
+        }
+        
+        #brown_table2 td {
+            border: 2px solid #f4e3d3;
+            padding: 15px;
+            background-color: rosybrown;
+            width: 33.33%;
+        }
+        
+        #brown_table2 a {
+            text-decoration: none;
+            color: black;
+            background-color: rosybrown;
+        }
+        
+        #hyperlink3 {
+            text-decoration: underline;
+            color: darkolivegreen; 
+            background-color: transparent;
+        }
+
+        .photo-container {
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            margin-left: 65px;
+            text-align: center;
+        }
+
+        .photo-description {
+            margin-top: 5px;
+            width: 300px; /* Set the width to match the image width */
+        }
+        
+
+        .job_btn {
+            color: black;
+            background-color: rosybrown;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: inherit; /* Inherit the font size from the universal styles */
+            transition: all 0.3s;
+            display: inline-block; /* Ensure the button takes only as much width as needed */
+            padding: 5px 10px; /* Add padding to the button */
+            text-decoration: none; /* Remove underline from the link */
+            box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5); /* Outset shadow */
+        }
+        
+        .job_btn:hover {
+            color: black;
+            transform: translateY(-10px);
+            background-color: darkseagreen;
+        }
+       
+        .job_btn:hover a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: darkseagreen;
+            color: inherit; /* Inherit text color from the parent */
+        }
+        
+        .job_btn a {
+            text-decoration: none; /* Remove underline from the link */
+            background-color: rosybrown;
+            color: inherit; /* Inherit text color from the parent */
+        }
+
+
+        /* Styling the search bar and button */
+            .search-container {
+                display: flex;
+                align-items: center;
+            }
+    
+            .search-input {
+                width: 700px; /* Adjust the width as needed */
+                padding: 8px;
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+    
+            .search-button {
+                padding: 8px 12px;
+                background-color: lightgoldenrodyellow; 
+                color: black;
+                border: 1px solid black;
+                border-radius: 4px;
+                cursor: pointer;
+                box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5); /* Outset shadow */
+            }
+    
+            /* Styling the button when hovered over */
+            .search-button:hover {
+                background-color: lightgray;
+            }
+
+            /* styling for Support university page button */
+            .btn_give {
+                color: black;
+                background-color: darkseagreen;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-size: inherit; /* Inheriting the font size from the universal styles */
+                transition: all 0.3s;
+                display: inline-block; /* Ensuring the button takes only as much width as needed */
+                padding: 5px 10px;
+                text-decoration: none; /* Removing underline from the link */
+                box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.5); /* Outset shadow */
+            }
+            
+            .btn_give:hover {
+                color: black;
+                transform: translateY(-10px);
+                background-color: #A0522D;
+            }
+           
+            .btn_give:hover a {
+                text-decoration: none; /* Remove underline from the link */
+                background-color: #A0522D;
+                color: inherit; /* Inherit text color from the parent */
+            }
+            
+            .btn_give a {
+                text-decoration: none; /* Remove underline from the link */
+                background-color: darkseagreen;
+                color: inherit; /* Inherit text color from the parent */
+            }
+
+            #hyperlink_CL {
+                text-decoration: underline;
+                color: darkslateblue; 
+                background-color: transparent;
+            }
+            
+
+                /* Normal button style */
+                .arrow-button {
+                    position: absolute;
+                    right: 365px;
+                    top: 100%;
+                    transform: translateY(-150%);
+                    background-color: IndianRed;
+                    border: 2px solid #964b00;
+                    color: #fff;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    font-family: 'Goudy Old Style', 'Garamond', serif;
+                    font-size: 20px;
+                    transition: background-color 0.3s, transform 0.3s;
+                }
+
+                /* Hover effect */
+                .arrow-button:hover {
+                    background-color: darkred; /* Change the background color on hover */
+                    transform: translateY(-150%) scale(1.1); /* Scale up the button slightly on hover */
+                }
+
+
+
+
+

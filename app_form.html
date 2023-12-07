@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en"> <!--english language-->
+
+<head>
+    <!--Defining how the web page should be displayed on different devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--For Character Encoding-->
+    <meta charset="utf-8">
+
+    <title>The University of Blackmourne Hollows at Shadowbrook Admission Application</title>
+    
+    <!--For favicon-->
+    <link rel = "icon" href ="https://i.pinimg.com/736x/36/12/d2/3612d28a0da448fe23314245b2d341df.jpg">
+    
+    <!--For linking CSS file-->
+    <link rel = "stylesheet" href = "app_form_css.css">
+</head>
+
+<body>    
+    <div class="container">
+        <!-- Image 3: image of logo -->
+        <img id="img3" src="https://i.pinimg.com/736x/36/12/d2/3612d28a0da448fe23314245b2d341df.jpg" 
+        height="80" width="130" style="float: left; border: 2px solid white;" alt="UBHS logo">
+        <br>
+        <h1 style="text-align:center; font-weight: bold;">
+            The University of Blackmourne Hollows at Shadowbrook Admission Application<!-- Displayed title -->
+        </h1>
+    </div>    
+    <div>
+        <hr>
+        <h3 style="text-align: left;">About Our University</h3>       
+    </div>
+
+    <div>
+        <!--Adding the image of the university (img1)-->
+        <img id="img1" src="https://berry.edu/articles/berry-magazine/_images/winterissue-THUMB.jpg" 
+        height="250" width="360" style="float: right; margin-left: 10px;" alt="UBHS img1">
+                
+        <p style="text-align: justify;">
+            In the shadowy corridors of the University of Blackmourne Hollows at Shadowbrook, a haunting influence lingers, whispering of its power to shape the most obscure minds among 
+            a diverse congregation burdened by the impending weight of global consequence. Amidst relentless research, 
+            eerie pedagogy, and the mournful echoes of civic duty, undergraduate and graduate education begets knowledge 
+            steeped in darkness, unfurling twisted innovations to heal the wounds of a tormented society. Founded in 1701, in Shadowbrook, Hauntsylvania, this institution reigns over a realm 
+            of foreboding and chilling degrees.
+        </p> 
+
+        <p style="text-align: justify;">
+            The University of Blackmourne Hollows at Shadowbrook, shrouded in perpetual shadows, extends its reach 
+            across the abyss, offering bachelor's, master's, and doctoral degrees that delve into the very depths 
+            of despair. With over 30 departments, our students descend further into the abyss, where they toil in 
+            silence, toiling closely with faculty members whose existence is as bleak as the void itself. In this 
+            foresaken realm, research is conducted, not as a pursuit of knowledge, but as a relentless journey through 
+            the nightmarish corridors of countless campus research institutes and centers, where answers are elusive, 
+            and the darkness envelopes all. External reviews, conducted every six years, serve as harbingers of 
+            impending doom, evaluating the quality of our research and teaching, while recommending ways to further 
+            intensify the darkness that permeates our programs' malevolent effectiveness.
+        </p>
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <form id="applicationForm" action="/submit_application" method="POST" enctype="multipart/form-data">
+            <!-- Starts a form with an action and submission method -->
+            <!-- POST  is more secure and can handle larger amounts of data, 
+                making it suitable for sensitive or complex data submissions, 
+                such as file uploads -->
+            <!-- enctype="multipart/form-data" is required for file uploads -->
+            <hr>
+            <h3>Personal Information</h3>
+            <div>
+                <label for="firstName">First Name:</label> <!-- Label for the first name -->
+                <input type="text" id="firstName" name="firstName" required=""><br><br> <!-- Adding "required" makes 
+                    the selection mandatory -->
+                
+                <label for="Prefix">Prefix:</label>
+                <select id="Prefix" name="Prefix">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                    <option value="Jr.">Jr.</option>
+                    <option value="Sr.">Sr.</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                    </select><br><br>
+                    
+    
+                <label for="middleName">Middle Name:</label>
+                <input type="text" id="middleName" name="middleName"><br><br>
+        
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required=""><br><br>
+        
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required=""><br><br>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <!-- "disabled" prevents this option from being selected -->
+                    <!-- "selected" makes it the default hidden option -->
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+                
+                <label for="SSN">Social Security Number (SSN) or National ID:</label>
+                <input type="text" id="SSN" name="SSN" required=""><br><br>
+            </div>
+    
+            <hr>
+            <h3>Contact Information</h3>
+            <div>
+                <div>
+                    <label for="areaCode">Phone Number:</label>
+                    <input type="tel" id="areaCode" name="areaCode" placeholder="Area Code" maxlength="4" style="width: 60px;" required="">
+                    <span> </span>
+                    <input type="tel" id="numDigits" name="numDigits" placeholder="Phone Number" required=""><br><br>
+                </div>    
+                              
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" autocomplete="off" required=""><br>          
+                <span id="emailError"></span><br> <!-- For displaying error messages -->
+                
+
+                <div>
+                    <label for="homeNumber" id="address">Mailing Address:</label>
+                    <!-- "placeholder" provides a hint to the user -->
+                    <input type="text" id="homeNumber" name="homeNumber" placeholder="Home Number" required="">
+                    <input type="text" id="UnitNumber" name="UnitNumber" placeholder="Unit" maxlength="5" style="width: 60px;" ><br><br>
+                    <input type="text" id="streetName" name="streetName" placeholder="Street Name"  required=""><br><br>
+                    <input type="text" id="city" name="city" placeholder="City" required=""><br><br>
+                    <input type="text" id="state" name="state" placeholder="State" required=""><br><br>
+                    <input type="text" id="zipCode" name="zipCode" placeholder="Zip Code" required=""><br><br>         
+                    <select id="country" name="country" title="Select your country" autocomplete="off" required="">
+                        <option value="" disabled selected hidden="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niger Republic">Niger Republic</option>
+                        <option value="North Korea">North Korea</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                        <!-- Add more countries here -->
+                    </select><br><br>
+                </div>
+  
+            </div>
+            <hr>
+            <h3>Parent/Guardian 1 Information</h3>
+            <div>
+                <label for="firstName_1">First Name:</label>
+                <input type="text" id="firstName_1" name="firstName_1" required=""><br><br> 
+                
+                <label for="Prefix_1">Prefix:</label>
+                <select id="Prefix_1" name="Prefix_1">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                    <option value="Jr.">Jr.</option>
+                    <option value="Sr.">Sr.</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                    </select><br><br>
+                    
+    
+                <label for="middleName_1">Middle Name:</label>
+                <input type="text" id="middleName_1" name="middleName_1"><br><br>
+        
+                <label for="lastName_1">Last Name:</label>
+                <input type="text" id="lastName_1" name="lastName_1" required=""><br><br>
+        
+                <label for="dob_1">Date of Birth:</label>
+                <input type="date" id="dob_1" name="dob_1" required=""><br><br>
+                
+                <label for="gender_1">Gender:</label>
+                <select id="gender_1" name="gender_1" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <!-- "disabled" prevents this option from being selected -->
+                    <!-- "selected" makes it the default hidden option -->
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="relationship_1">Relationship:</label>
+                <select id="relationship_1" name="relationship_1" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <!-- "disabled" prevents this option from being selected -->
+                    <!-- "selected" makes it the default hidden option -->
+                    <option value="Aunty">Aunty</option>
+                    <option value="Boyfriend">Boyfriend</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Brother in Law">Brother-in-law</option>
+                    <option value="Cousin">Cousin</option>
+                    <option value="Daugther">Daugther</option>
+                    <option value="Daugther in Law">Daugther-in-law</option>
+                    <option value="Extended Relative">Extended Relative</option>
+                    <option value="Father">Father</option>
+                    <option value="Father in Law">Father-in-law</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Girlfriend">Girlfriend</option>
+                    <option value="Grandaughter">Grandaugther</option>
+                    <option value="Grandfather">Grandfather</option>
+                    <option value="Grandmother">Grandmother</option>
+                    <option value="Grandson">Grandson</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Mother in Law">Mother-in-law</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Sister in Law">Sister-in-law</option>
+                    <option value="Son">Son</option>
+                    <option value="Son in Law">Son-in-law</option>
+                    <option value="Uncle">Uncle</option>
+                    <option value="Wife">Wife</option>
+                </select><br><br>
+                
+                <label for="SSN_1">Social Security Number (SSN) or National ID:</label>
+                <input type="text" id="SSN_1" name="SSN_1" required=""><br><br>
+            </div>
+            
+            <div>
+                <div>
+                    <label for="areaCode_1">Phone Number:</label>
+                    <input type="tel" id="areaCode_1" name="areaCode_1" placeholder="Area Code" maxlength="4" style="width: 60px;" required="">
+                    <span> </span>
+                    <input type="tel" id="numDigits_1" name="numDigits_1" placeholder="Phone Number" required=""><br><br>
+                </div>                   
+                  
+                <label for="email_1">Email Address:</label>
+                <input type="email" id="email_1" name="email_1" autocomplete="off" required=""><br>          
+                <span id="emailError_1"></span><br> <!-- For displaying error messages -->
+                
+                <div>
+                    <label for="homeNumber_1" id="address_1">Mailing Address:</label>
+                    <!-- "placeholder" provides a hint to the user -->
+                    <input type="text" id="homeNumber_1" name="homeNumber_1" placeholder="Home Number" required="">
+                    <input type="text" id="UnitNumber_1" name="UnitNumber_1" placeholder="Unit" maxlength="5" style="width: 60px;"><br><br>
+                    <input type="text" id="streetName_1" name="streetName_1" placeholder="Street Name" required=""><br><br>
+                    <input type="text" id="city_1" name="city_1" placeholder="City" required=""><br><br>
+                    <input type="text" id="state_1" name="state_1" placeholder="State" required=""><br><br>
+                    <input type="text" id="zipCode_1" name="zipCode_1" placeholder="Zip Code" required=""><br><br>
+                    <select id="country_1" name="country_1" required="">
+                        <option value="" disabled selected hidden="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niger Republic">Niger Republic</option>
+                        <option value="North Korea">North Korea</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br><br>
+                </div>
+
+            </div>
+
+            <hr>
+            <h3>Parent/Guardian 2 Information</h3>
+            <div>
+                <label for="firstName_2">First Name:</label> 
+                <input type="text" id="firstName_2" name="firstName_2" required=""><br><br>
+                
+                <label for="Prefix_2">Prefix:</label>
+                <select id="Prefix_2" name="Prefix_2">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms.">Ms.</option>
+                    <option value="Dr.">Dr.</option>
+                    <option value="Prof.">Prof.</option>
+                    <option value="Jr.">Jr.</option>
+                    <option value="Sr.">Sr.</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                    <option value="VI">VI</option>
+                    </select><br><br>
+                    
+    
+                <label for="middleName_2">Middle Name:</label>
+                <input type="text" id="middleName_2" name="middleName_2"><br><br>
+        
+                <label for="lastName_2">Last Name:</label>
+                <input type="text" id="lastName_2" name="lastName_2" required=""><br><br>
+        
+                <label for="dob_2">Date of Birth:</label>
+                <input type="date" id="dob_2" name="dob_2" required=""><br><br>
+                
+                <label for="gender_2">Gender:</label>
+                <select id="gender_2" name="gender_2" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <!-- "disabled" prevents this option from being selected -->
+                    <!-- "selected" makes it the default hidden option -->
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br><br>
+
+                <label for="relationship_2">Relationship:</label>
+                <select id="relationship_2" name="relationship_2" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <!-- "disabled" prevents this option from being selected -->
+                    <!-- "selected" makes it the default hidden option -->
+                    <option value="Aunty">Aunty</option>
+                    <option value="Boyfriend">Boyfriend</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Brother in Law">Brother-in-law</option>
+                    <option value="Cousin">Cousin</option>
+                    <option value="Daugther">Daugther</option>
+                    <option value="Daugther in Law">Daugther-in-law</option>
+                    <option value="Father">Father</option>
+                    <option value="Father in Law">Father-in-law</option>
+                    <option value="Girlfriend">Girlfriend</option>
+                    <option value="Grandaughter">Grandaugther</option>
+                    <option value="Grandfather">Grandfather</option>
+                    <option value="Grandmother">Grandmother</option>
+                    <option value="Grandson">Grandson</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Mother">Mother</option>
+                    <option value="Mother in Law">Mother-in-law</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Sister in Law">Sister-in-law</option>
+                    <option value="Son">Son</option>
+                    <option value="Son in Law">Son-in-law</option>
+                    <option value="Uncle">Uncle</option>
+                    <option value="Wife">Wife</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+                
+                <label for="SSN_2">Social Security Number (SSN) or National ID:</label>
+                <input type="text" id="SSN_2" name="SSN_2" required=""><br><br>
+            </div>
+            
+            <div>
+                <div>
+                    <label for="areaCode_2">Phone Number:</label>
+                    <input type="tel" id="areaCode_2" name="areaCode_2" placeholder="Area Code" maxlength="4" style="width: 60px;" required="">
+                    <span> </span>
+                    <input type="tel" id="numDigits_2" name="numDigits_2" placeholder="Phone Number" required=""><br><br>
+                </div>    
+                                  
+                <label for="email_2">Email Address:</label>
+                <input type="email" id="email_2" name="email_2" autocomplete="off" required=""><br>          
+                <span id="emailError_2"></span><br> <!-- For displaying error messages -->
+                
+                <div>
+                    <label for="homeNumber_2" id="address_2">Mailing Address:</label>
+                    <!-- "placeholder" provides a hint to the user -->
+                    <input type="text" id="homeNumber_2" name="homeNumber_2" placeholder="Home Number"  required="">
+                    <input type="text" id="UnitNumber_2" name="UnitNumber_2" placeholder="Unit" maxlength="5" style="width: 60px;"><br><br>
+                    <input type="text" id="streetName_2" name="streetName_2" placeholder="Street Name"  required=""><br><br>
+                    <input type="text" id="city_2" name="city_2" placeholder="City"  required=""><br><br>
+                    <input type="text" id="state_2" name="state_2" placeholder="State"  required=""><br><br>
+                    <input type="text" id="zipCode_2" name="zipCode_2" placeholder="Zip Code"  required=""><br><br>         
+                    <select id="country_2" name="country_2" required="">
+                        <option value="" disabled selected hidden="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niger Republic">Niger Republic</option>
+                        <option value="North Korea">North Korea</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br><br>
+                </div>
+
+            </div>
+
+            <hr>
+            <h3>Student Category</h3> 
+            <div>
+                <label for="studentCategory">Student Category:</label>
+                <select id="studentCategory" name="studentCategory" required="">
+                    <option value="" disabled selected hidden="">Not selected</option>
+                    <option value="Domestic (In State)">Domestic (In State)</option>
+                    <option value="Domestic (Out of State)">Domestic (Out of State)</option>
+                    <option value="Dual Enrollment">Dual Enrollment</option>
+                    <option value="International">International</option>
+                    <option value="Online or Distant Education">Online or Distant Education</option>
+                    <option value="Returning">Returning</option>
+                    <option value="Transfer">Transfer</option>
+                </select><br><br>
+                
+                <div id="alternateSchoolInfo" style="display: none;">
+                    <label for="Alternate">Alternate School Name:</label>
+                    <input type="text" id="Alternate" name="AlternateSchool"><br><br>
+                    
+                    <label for="AlternateType">School Type:</label>
+                    <select id="AlternateType" name="AlternateType">
+                        <option value="" disabled selected hidden="">Not selected</option>
+                        <option value="High School">High School</option>
+                        <option value="Community College">Community College</option>
+                        <option value="Four Year University">Four Year University</option>
+                    </select><br><br>
+                    
+                    <div>
+                        <label for="ASNumber" id="ASaddress">Alternate School Address:</label>
+                        <input type="text" id="ASNumber" name="ASNumber" placeholder="School Number"><br><br>
+                        <input type="text" id="streetName_3" name="streetName_3" placeholder="Street Name"><br><br>
+                        <input type="text" id="city_3" name="city_3" placeholder="City"><br><br>
+                        <input type="text" id="state_3" name="state_3" placeholder="State"><br><br>
+                        <input type="text" id="zipCode_3" name="zipCode_3" placeholder="Zip Code"><br><br>
+                        <select id="country_3" name="country_3">
+                            <option value="" disabled selected hidden="">Select Country</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Chad">Chad</option>
+                            <option value="China">China</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="India">India</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Niger Republic">Niger Republic</option>
+                            <option value="North Korea">North Korea</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="South Sudan">South Sudan</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="United States">United States</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select><br><br>    
+                    </div>
+                </div>
+    
+            </div>
+            
+            <hr>
+            <h3>Citizenship and Residency</h3>
+            <div>
+                <label for="status">Select your citizenship status:</label>
+                <select id="status" name="status" required="">
+                    <option value="" disabled selected hidden="">Not selected</option>
+                    <option value="DACA Recipient">DACA Recipient</option>
+                    <option value="Dual Citizenship">Dual Citizenship</option>
+                    <option value="International Student">International Student</option>
+                    <option value="Other (Specify)">Other (Specify)</option>
+                    <option value="Permanent Resident (Green Card Holder)">Permanent Resident (Green Card Holder)</option>
+                    <option value="Refugee/Asylee">Refugee/Asylee</option>
+                    <option value="Undocumented">Undocumented</option>
+                    <option value="U.S. Citizen">U.S. Citizen</option>
+                </select><br><br>
+                <p id="error-message" style="color: red; display: none;">Invalid Selection</p>
+            </div>
+    
+            <div id="visaStatus" style="display: none;">
+        
+                <label for="visaType">Visa Type:</label>
+                <select id="visaType" name="visaType">
+                    <option value="" disabled selected hidden="">Select Visa Type</option>
+                    <option value="Artist or Entertainer Visa">Artist or Entertainer Visa</option>
+                    <option value="Asylum Visa">Asylum Visa</option>
+                    <option value="Business Visa">Business Visa</option>
+                    <option value="Crew Visa">Crew Visa</option>
+                    <option value="Diplomatic Visa">Diplomatic Visa</option>
+                    <option value="Exchange Visitor Visa">Exchange Visitor Visa</option>
+                    <option value="Family Reunion Visa">Family Reunion Visa</option>
+                    <option value="Investor Visa">Investor Visa</option>
+                    <option value="Journalist Visa">Journalist Visa</option>
+                    <option value="Long-Term Visa">Long-Term Visa</option>
+                    <option value="Medical Visa">Medical Visa</option>
+                    <option value="Refugee Visa">Refugee Visa</option>
+                    <option value="Retirement Visa">Retirement Visa</option>
+                    <option value="Spousal Visa">Spousal Visa</option>
+                    <option value="Sports Visa">Sports Visa</option>
+                    <option value="Student Visa">Student Visa</option>
+                    <option value="Tourist Visa">Tourist Visa</option>
+                    <option value="Transit Visa">Transit Visa</option>
+                    <option value="Work Visa">Work Visa</option>        
+                </select><br><br>
+                
+                <label for="visaNumber">Visa Number:</label>
+                <input type="number" id="visaNumber" name="visaNumber"><br><br>
+            
+                <label for="visaIssuance">Date of Visa Issuance:</label>
+                <input type="date" id="visaIssuance" name="visaIssuance"><br><br>
+            
+                <label for="visaExpiration">Date of Visa Expiration:</label>
+                <input type="date" id="visaExpiration" name="visaExpiration"><br><br>
+                
+                <label for="visaDocuments">Attach copies of your visa or related documents as proof of your visa status. Upload .doc, .docx or .pdf documents:</label>
+                <br>
+                <input type="file" id="visaDocuments" name="visaDocuments" accept=".doc, .docx, .pdf" multiple><br><br>  
+            
+            </div>            
+            
+            <div id="greenCardDiv" style="display: none;">
+                <label for="greenCard">Attach a copy of your Green Card as proof of your Permanent Residency status. Upload .doc, .docx, or .pdf documents:</label>
+                <br>
+                <input type="file" id="greenCard" name="greenCard" accept=".doc, .docx, .pdf"><br><br>
+            </div>
+
+            <div id="country2Div" style="display: none;">
+                <label for="country2">Country of origin/ Other nationality:</label>
+                <select id="country2" name="country2">
+                    <option value="" disabled selected hidden="">Select Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chad">Chad</option>
+                    <option value="China">China</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niger Republic">Niger Republic</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select><br><br>
+            </div>
+    
+            <div>
+                <label for="country1">Country of legal residence:</label>
+                <select id="country1" name="country1" required="">
+                    <option value="" disabled selected hidden="">Select Country</option>
+                    <option value="Afghanistan">Afghanistan</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Chad">Chad</option>
+                    <option value="China">China</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="India">India</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niger Republic">Niger Republic</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="South Sudan">South Sudan</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select><br><br>
+            </div>
+            
+            <div id="usStateSection" style="display: none;">
+                <label for="usState">State of legal residence  (for tuition purpose):</label>
+                <select id="usState" name="usState">
+                    <option value="" disabled selected hidden="">Select State</option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hauntsylvania">Hauntsylvania</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                  </select><br><br>     
+            </div>
+            
+            <hr>
+            <h3>Educational Background</h3>
+            
+            <div>
+                <label for="HSName">High School Name:</label> <!-- Label for the high school name -->
+                <input type="text" id="HSName" name="HSName" size="35" required=""><br><br> <!-- Adding "required" makes the selection mandatory -->    
+                
+                <div>
+                    <label for="HSNumber" id="HSaddress">High School Address:</label>
+                    <input type="text" id="HSNumber" name="HSNumber" placeholder="School Number"  required=""><br><br>
+                    <input type="text" id="streetName_4" name="streetName_4" placeholder="Street Name" required=""><br><br>
+                    <input type="text" id="city_4" name="city_4" placeholder="City" required=""><br><br>
+                    <input type="text" id="state_4" name="state_4" placeholder="State" required=""><br><br>
+                    <input type="text" id="zipCode_4" name="zipCode_4" placeholder="Zip Code" required=""><br><br>
+                    <select id="country_4" name="country_4" required="">
+                        <option value="" disabled selected hidden="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Kazakhstan">Kazakhstan</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niger Republic">Niger Republic</option>
+                        <option value="North Korea">North Korea</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br><br>
+                </div>
+                
+                <label for="grad">High School Graduation Date or Expected Graduation Date:</label>
+                <input type="date" id="grad" name="grad" required=""><br><br><br>
+    
+                <p style="color: maroon;"><b>For Transfer and Dual Enrollment students</b></p>
+    
+                <label for="CCName"> Community College or University Name:</label> <!-- Label for the Community College/ University name -->
+                <input type="text" id="CCName" name="CCName" size="35"><br><br>
+    
+                <div>
+                    <label for="CCNumber" id="CCaddress">Community College or University Address:</label>
+                    <input type="text" id="CCNumber" name="CCName" placeholder="School Number"><br><br>
+                    <input type="text" id="streetName_5" name="streetName_5" placeholder="Street Name"><br><br>
+                    <input type="text" id="city_5" name="city_5" placeholder="City"><br><br>
+                    <input type="text" id="state_5" name="state_5" placeholder="State"><br><br>
+                    <input type="text" id="zipCode_5" name="zipCode_5" placeholder="Zip Code"><br><br>
+                    <select id="country_5" name="country_5">
+                        <option value="" disabled selected hidden="">Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Burkina Faso">Burkina Faso</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chad">Chad</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Djibouti">Djibouti</option>
+                        <option value="El Salvador">El Salvador</option>
+                        <option value="Eritrea">Eritrea</option>
+                        <option value="Fiji">Fiji</option>
+                        <option value="Finland">Finland</option>
+                        <option value="Gabon">Gabon</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Haiti">Haiti</option>
+                        <option value="India">India</option>
+                        <option value="Japan">Japan</option>
+                        <option value="KazakCCtan">Kazakhstan</option>
+                        <option value="Lesotho">Lesotho</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Niger Republic">Niger Republic</option>
+                        <option value="North Korea">North Korea</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Senegal">Senegal</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="United States">United States</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br><br>
+    
+                </div>
+            </div>
+           <hr>
+            <div>
+                <h3>Standarized Tests</h3>
+                <label for="testsDocuments">
+                    Attach copies of your standardized test scores (e.g., SAT, ACT, GRE, GMAT, TOEFL, IELTS, PCAT, MAT), 
+                    your resume and your academic transcripts. Upload as .doc, .docx or .pdf documents:
+                </label>
+                <input type="file" id="testsDocuments" name="testsDocuments" accept=".doc, .docx, .pdf" multiple required=""><br><br>  
+    
+            </div>
+            
+            <hr>
+            <h3>Academic Interests</h3>
+            <div>
+                <label for="term">Anticipated Enrollment Term:</label>
+                <select id="term" name="term" required="">
+                    <option value="" disabled selected hidden="">Not selected</option>
+                    <option value="Fall 2024">Fall 2024</option>
+                    <option value="Summer 2024">Summer 2024</option>
+                    <option value="Spring 2024">Spring 2024</option>
+                </select><br><br>
+                
+                <label for="degreeType">Degree Type:</label>
+                <select id="degreeType" name="degreeType" required="">
+                    <option value="" disabled selected hidden="">Not selected</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="Doctoral Degree">Doctoral Degree</option>
+                </select><br><br>
+                
+                <label for="major">Intended Major or Field of Study:</label>
+                <select id="major" name="major" required="">
+                    <option value="" disabled selected hidden="">Not selected</option>
+                    <option value="Astrobiology">Astrobiology</option>
+                    <option value="Astronomy">Astronomy</option>
+                    <option value="Bioinformatics and Computational Biology">Bioinformatics and Computational Biology</option>
+                    <option value="Biomedical Engineering">Biomedical Engineering</option>
+                    <option value="Biostatistics">Biostatistics</option>
+                    <option value="Business Administration">Business Administration</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Classical Studies">Classical Studies</option>
+                    <option value="Clinical Psychology">Clinical Psychology</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Earth and Marine Sciences">Earth and Marine Sciences</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Egyptology">Egyptology</option>
+                    <option value="Environmental Sciences and Engineering">Environmental Sciences and Engineering</option>
+                    <option value="Fermentation Sciences">Fermentation Sciences</option>
+                    <option value="Folklore and Mythology">Folklore and Mythology</option>
+                    <option value="Genetics and Molecular Biology">Genetics and Molecular Biology</option>
+                    <option value="Health Informatics">Health Informatics</option>
+                    <option value="Information Science">Information Science</option>
+                    <option value="Materials Science">Materials Science</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Mortuary Science">Mortuary Science</option>
+                    <option value="Music and Performing Arts">Music and Performing Arts</option>
+                    <option value="Neuroscience and Neurotechnology">Neuroscience and Neurotechnology</option>
+                    <option value="Pharmaceutical Sciences">Pharmaceutical Sciences</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="Puppet Arts">Puppet Arts</option>
+                    <option value="Quantum Computing">Quantum Computing</option>
+                    <option value="Rhetoric">Rhetoric</option>
+                    <option value="Theology and Religious Studies">Theology and Religious Studies</option>
+                    <option value="Viticulture and Enology">Viticulture and Enology</option>
+                    <option value="Zooplankton Ecology">Zooplankton Ecology</option>
+                </select><br><br><br>
+                
+                <label for="prompt1">
+                    Delve into a haunting memory from your academic path, one that cast a shadow over your soul and set 
+                    ablaze the embers of your chosen field of study. How has this haunting encounter left an indelible 
+                    mark on your dreams, driving you to seek solace and purpose within the realm of education, amidst the 
+                    shadows that envelop your path? (Max 800 words).
+                </label>
+                <textarea id="prompt1" name="prompt1" rows="24" cols="160" oninput="checkWordCount()"></textarea>
+            </div>
+            
+            <hr>
+            <h3>Extracurricular Activities and Work Experience</h3>
+            <label for="activities">
+                In the shadowy depths of your academic history, we beckon you to unveil a clandestine record of 
+                your engagements in extracurricular undertakings, secret societies, and clandestine alliances. 
+                Reveal the enigma of your work experiences and whisper your cryptic professional ambitions into 
+                the void. (Max 650 words).
+            </label>
+            <textarea id="activities" name="activities" rows="20" cols="130" oninput="checkWordCount()"></textarea>
+
+            <hr>
+            <h3>Personal Statements</h3>
+            <p>Choose Three Questions and Provide Your Responses (Max 1200 words per each document).</p>
+            <p>1. Recall a moment when you found yourself ensnared in a moral quandary of considerable weight. How did 
+                you navigate the treacherous waters, and what scars did you bear as souvenirs of the experience?
+            </p>
+            <p>2. Detail a juncture in your life when the shadows of failure cast a chilling pall over your path. 
+                What haunting lessons emerged from the depths of this setback, etching themselves into the fabric 
+                of your character and perception?
+            </p>
+            <p>3. If you were granted the unsettling privilege of a conversation with a historical figure, living 
+                or departed, who would emerge from the recesses of history's crypts? What unsettling discourse 
+                would transpire, and how might the specter of this communion haunt your life's purpose and destiny?
+            </p>
+            <p>4. In the ever-darkening tapestry of our interconnected world, how do you grapple with the weight of 
+                global citizenship? What burdens of experience or harrowing perspectives have imbued you with a 
+                harrowing sense of global responsibility?
+            </p>
+            <p>5. Envision a dystopian future where you possess the unsettling power to confront an insurmountable 
+                enigma or confront a malevolent force. What bleak conundrum would you dare to confront, and how 
+                would you navigate the abyss in your quest for resolution?
+            </p>
+            <p>6. Delve into the depths of a tome, artwork, or scientific theorem that has cast a chilling shadow 
+                upon your psyche. How has this intellectual haunting shaped the contours of your worldview or sown 
+                the seeds of despair that sprout into your academic pursuits?
+            </p>
+            <p>7. If the burden of designing a course or educational program fell upon your shoulders, what macabre 
+                vision would you conjure from the void? How would this eerie curriculum ensnare the unsuspecting 
+                minds of students and usher them toward the precipice of personal metamorphosis?
+            </p>
+            <br>
+            <label for="threes"> Upload the files as .doc, .docx or .pdf documents (three required):
+            </label>
+            <input type="file" id="threes" name="threes" accept=".doc, .docx, .pdf" multiple required=""><br><br>  
+            
+
+            <hr>
+            <h3>Letters of Recommendation</h3>
+            <p>Upload your letters of recommendation</p>
+            <label for="rec">Upload as .doc, .docx or .pdf documents (three required):</label>
+            <input type="file" id="rec" name="rec" accept=".doc, .docx, .pdf" multiple required=""><br><br>
+            
+            <hr>
+            <h3>Applicaton Type</h3>
+            <div>
+                <label for="appType">Application type:</label>
+                <select id="appType" name="appType" required="">
+                    <option value="" disabled selected hidden="">Not selected</option> 
+                    <option value="Early Action">Early Action</option>
+                    <option value="Early Decision">Early Decision</option>
+                    <option value="Regular Decision">Regular Decision</option>
+                </select><br><br>
+            </div>
+            <hr>
+            <h3>Additional Materials</h3>
+            <div>
+                <p style="text-align: justify;">
+                    You may choose to submit supplementary materials, a futile attempt to add a glimmer of hope to 
+                    your application. In this shadowed realm, your portfolio, language proficiency test scores
+                    ,certificates or awards or personal website is but a feeble 
+                    candle in a relentless storm. Beware, for these meager offerings may merely accentuate the void.  
+                </p>
+                <label for="additional">Upload as .doc, .docx or .pdf documents:</label>
+                <input type="file" id="additional" name="additional" accept=".doc, .docx, .pdf" multiple><br><br>
+                
+                <label for="linkInput">Paste your link here:</label>
+                <input type="text" id="linkInput" name="linkInput" size="40">
+                <button type="button" onclick="validateLink()" class="btn">Validate Link</button>
+            </div>
+
+            <br>
+            <hr>
+            <h3>Criminal History</h3>
+            <div>
+                <label for="convictionDropdown">Have you ever been convicted of a felony?</label>
+                <select id="convictionDropdown" name="conviction" onchange="showConvictionDetails()" required="">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <br>
+                
+                <div id="convictionDetails" style="display: none;">
+                    <label for="convictionExplanation">Please specify:</label><br>
+                    <textarea id="convictionExplanation" name="convictionExplanation" rows="7" cols="60"></textarea>                
+                </div>   
+            </div>
+
+            <div>
+                <br>
+                <label for="conviction1Dropdown">Have you ever been convicted of a misdemeanor?</label>
+                <select id="conviction1Dropdown" name="conviction1" onchange="showConviction1Details()" required="">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <br>
+                
+                <div id="conviction1Details" style="display: none;">
+                    <label for="conviction1Explanation">Please specify:</label><br>
+                    <textarea id="conviction1Explanation" name="conviction1Explanation" rows="7" cols="60"></textarea>                
+                </div>   
+            </div>
+
+            <div>
+                <br>
+                <label for="conviction2Dropdown">Are you currently on probation or parole?</label>
+                <select id="conviction2Dropdown" name="conviction2" onchange="showConviction2Details()" required="">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <br>
+                
+                <div id="conviction2Details" style="display: none;">
+                    <label for="conviction2Explanation">Please specify:</label><br>
+                    <textarea id="conviction2Explanation" name="conviction2Explanation" rows="7" cols="60"></textarea>                
+                </div>   
+            </div>
+
+            <div>
+                <br>
+                <label for="conviction3Dropdown">Have you ever been expelled or dismissed from a school or college for disciplinary reasons?</label>
+                <select id="conviction3Dropdown" name="conviction3" onchange="showConviction3Details()" required="">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+                <br>
+                
+                <div id="conviction3Details" style="display: none;">
+                    <label for="conviction3Explanation">Please specify:</label><br>
+                    <textarea id="conviction3Explanation" name="conviction3Explanation" rows="7" cols="60"></textarea>                
+                </div>   
+            </div>
+
+            <br>
+            <hr>
+            <h3>Application Review</h3>
+            
+            <div id="review">
+                <p>
+                    Review your information before submission; once you have submitted it, there is no turning back, 
+                    and your responses are set in stone.
+                </p>
+                <button class = "btn" type="button" id="editButton">Review Application</button>
+            </div>
+
+            <br>
+            <hr>
+            <h3>Affirmation Statments</h3>
+            <div>
+                <label>
+                    <span style="color: maroon;">&bull;</span> Honesty and Authenticity Affirmation: I certify that all the information provided in this application, including personal details, extracurricular activities, and achievements, is true, complete, and accurate to the best of my knowledge
+                    <input type="checkbox" name="affirmation1" required="">
+                </label><br>
+    
+                <label>
+                    <span style="color: maroon;">&bull;</span> Academic Integrity Affirmation: I affirm that all academic work submitted in this application, including essays and transcripts, is entirely my own, and any external sources used are properly cited
+                    <input type="checkbox" name="affirmation2" required="">
+                </label><br>
+    
+                <label>
+                     <span style="color: maroon;">&bull;</span> No Plagiarism Affirmation: I certify that there is no plagiarism or unauthorized assistance in any part of this application, and all writing samples are my original work
+                    <input type="checkbox" name="affirmation3" required="">
+                </label><br>
+    
+                <label>
+                     <span style="color: maroon;">&bull;</span> Application Material Accuracy Affirmation: I attest that all materials submitted, such as recommendation letters and portfolios, accurately represent my abilities and accomplishments
+                    <input type="checkbox" name="affirmation4" required="">
+                </label><br>
+    
+                <label>
+                     <span style="color: maroon;">&bull;</span> Non-Disclosure of False Information: I acknowledge that providing false or misleading information in this application may result in disqualification from the admission process or dismissal if already enrolled
+                    <input type="checkbox" name="affirmation5" required="">
+                </label><br>
+    
+                <label>
+                     <span style="color: maroon;">&bull;</span> Application Fee Acknowledgment: I understand that the application fee is non-refundable, regardless of the admission outcome
+                    <input type="checkbox" name="affirmation6" required="">
+                </label><br>
+    
+                <label>
+                     <span style="color: maroon;">&bull;</span> Communication Consent: I agree to receive communications from the college regarding my application status and other relevant updates
+                    <input type="checkbox" name="affirmation7" required="">
+                </label><br>
+            </div>
+            <hr>
+            <h3>Signature and Certification</h3>
+            <div>
+                <!-- Statement of Authenticity Checkbox -->
+                <label for="authenticity"> <span style="color: maroon;">&bull;</span> In the grim tapestry of my existence, I acknowledge that these revelations are but somber threads of unwavering authenticity</label>
+                <input type="checkbox" id="authenticity" name="authenticity" required="">
+                <br>
+
+                <!-- Full Name -->
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" size="40" required="">
+                <br>
+            </div>
+            <hr>
+            <h3>Application Fee or Waiver</h3>
+            <div>
+                <p>The application of $75 is payable online with a credit card.</p>
+                <p>In this bleak reality, we acknowledge that the weight of college application fees bears down upon countless unfortunate families. 
+                    Fee waivers extend their cold, feeble hand to both those from distant lands and the natives. UBHS, cloaked in 
+                    impartiality, peers into your finances, and the plea for a waiver shall not darken the chances of your acceptance.
+                </p>
+                <label for="waiver">Would you like to beseech for a fee waiver?</label>
+                <select id="waiver" name="waiver" onchange="feeWaiver()" required="">
+                    <option value="" disabled selected hidden="">Not Selected</option>
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option>
+                </select>
+
+
+                <div id="waiverDetails" style="display: none;">
+                    <br>
+                    <p><b>Upload supporting documentation:</b></p>
+                    <label for="supporting_documentation">Upload the relevant document(s) (e.g., proof of eligibility, tax returns) in PDF or Word format.</label>
+                    <input type="file" id="supporting_documentation" name="supporting_documentation" accept=".pdf, .doc, .docx" multiple>    
+                </div>
+                
+               
+                <div id="waiverDetails1" style="display: none;">
+                    <br>
+                    <p><b>Pay here:</b></p><br>
+                    <!--incomplete-->
+                </div>
+            </div>
+
+            <hr>
+            <h3>Application Submission</h3>
+            <div>
+                <input type="submit" id="submitBtn" class="btn" value="Submit Application" > <!-- Creates a submit button for the form -->
+            </div>
+            
+        </form>
+    </div>
+    
+    <script src="app_form_js.js"></script> <!-- For linking js file -->
+</body>
+</html>
