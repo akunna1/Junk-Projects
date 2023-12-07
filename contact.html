@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Me</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- For favicon -->
+   <link rel="icon" href="images/pic-x2.jpg" type="image/jpeg">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Guidebook</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search projects..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-x3.jpg" class="image" alt="">
+         <h3 class="name">Want Extra Info?</h3>
+         <a href="contact.html" target="_blank" class="btn">Contact Me</a>
+         <div class="flex-btn">
+            <a href="https://drive.google.com/file/d/1Yam-yaXYqsZWLUp6TDlJCQ9YIJUoYB06/view?usp=sharing" class="option-btn" target="_blank">Resume</a>
+            <a href="https://github.com/akunna1" class="option-btn" target="_blank">Github</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-x1.jpg" class="image" alt="">
+      <h3 class="name">Akunna Onyekachi</h3>
+      <p class="role">Software Engineer/Data Scientist</p>
+      <a href="profile.html" class="btn">About Me</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fa-solid fa-handshake"></i><span>Introduction</span></a>
+      <a href="courses.html"><i class="fa-solid fa-computer"></i><span>Web App Projects</span></a>
+      <a href="teachers.html"><i class="fa-solid fa-code-branch"></i></i><span>Data Science Projects</span></a>
+      <a href="contact.html"><i class="fa-solid fa-mobile"></i><span>Mobile App Projects</span></a>
+   </nav>
+
+</div>
+
+<section class="contact">
+
+   <div class="row">
+
+      <div class="image">
+         <img src="images/contact-img.svg" alt="">
+      </div>
+
+      <form action="send-email.php" method="post" name="emailContact"> <!-- linking php file here and added name-->
+         <h3>Get in touch</h3>
+         <input type="text" placeholder="Enter your name" name="name" required maxlength="50" class="box">
+         <input type="email" placeholder="Enter your email" name="email" required maxlength="50" class="box">
+         <input type="number" placeholder="Enter your number" name="number" required maxlength="50" class="box">
+         <textarea name="msg" class="box" placeholder="Enter your message" required maxlength="1000" cols="30" rows="10"></textarea>
+         <input type="submit" value="send message" class="inline-btn" name="submit">
+      </form>
+
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>Phone Number</h3>
+         <a href="tel:9197801919">919-780-1919</a>
+      </div>
+      
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>Email Address</h3>
+         <a href="mailto:akunna1mail@gmail.com">akunna1mail@gmail.com</a>
+      </div>
+
+   </div>
+
+</section>
+
+<footer class="footer">
+
+   &copy; Copyright @ 2023 by <span>Akunna Tech Solutions</span> | All Rights Reserved
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>

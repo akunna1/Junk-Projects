@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- For favicon -->
+   <link rel="icon" href="images/pic-x2.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+<header class="header">
+   <section class="flex">
+
+      <a href="home.html" class="logo">Guidebook</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search projects..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-x3.jpg" class="image" alt="">
+         <h3 class="name">Want Extra Info?</h3>
+         <a href="contact.html" target="_blank" class="btn">Contact Me</a>
+         <div class="flex-btn">
+            <a href="https://drive.google.com/file/d/1Yam-yaXYqsZWLUp6TDlJCQ9YIJUoYB06/view?usp=sharing" class="option-btn" target="_blank">Resume</a>
+            <a href="https://github.com/akunna1" class="option-btn" target="_blank">Github</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-x1.jpg" class="image" alt="">
+      <h3 class="name">Akunna Onyekachi</h3>
+      <p class="role">Software Engineer/Data Scientist</p>
+      <a href="profile.html" class="btn">About Me</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fa-solid fa-handshake"></i><span>Introduction</span></a>
+      <a href="courses.html"><i class="fa-solid fa-computer"></i><span>Web App Projects</span></a>
+      <a href="teachers.html"><i class="fa-solid fa-code-branch"></i></i><span>Data Science Projects</span></a>
+      <a href="contact.html"><i class="fa-solid fa-mobile"></i><span>Mobile App Projects</span></a>
+   </nav>
+
+</div>
+
+<section class="about">
+   <div class="row">
+
+      <div class="image">
+         <img src="images/pic-x4.svg" alt="">
+      </div>
+
+      <div class="content">
+         <h3>Introductory Terminologies</h3>
+         <p><span class="purple_text">Coding: </span>the process of translating human-readable instructions into a machine-executable format, typically using a programming language, to instruct computers to perform specific tasks or functions.</p>
+         <p><span class="purple_text">Programming: </span>encompasses the entire process of developing software, which includes designing, planning, coding, testing, debugging, and maintaining software applications. It involves the higher-level tasks of architectural design, problem-solving, and algorithm development.</p>
+      </div>
+
+      <div class="content">
+         <h3>Introduction to Web Development</h3>
+         <p><span class="purple_text">Web Development: </span>The process of creating and maintaining websites and web applications, encompassing tasks such as designing, coding, and optimizing to ensure functionality and user experience on the internet.</p>
+         
+         <p style="text-decoration: underline; text-decoration-color:var(--main-color); text-decoration-thickness: 2.5px;">Have you ever heard of Microsoft (MS) Frontpage?</p>
+         <p style="text-align: left;">Well…it was actually the first web development tool that I used! It was 
+            popular in the late 1990s and early 2000s for creating and managing websites. It allowed users to design web pages using a
+             graphical user interface (GUI) without needing to write HTML code manually. However, FrontPage has been discontinued by 
+             Microsoft, and it was succeeded by Microsoft Expression Web as the company's primary web development tool. Microsoft 
+             Expression Web was eventually succeeded by Visual Studio Code Editor.
+         </p>
+
+         <p>Comparing MS Frontpage, MS Expression Web and VS Code Editor:</p>
+         <table class="custom-table"> <!-- Start of the table(11 rows, 4 columns) -->
+            <tr> <!-- creating row 1 -->
+                <td><b>Aspect</b></td> <!-- creating column 1 in row 1 -->
+                <td><b>MS Frontpage</b></td> <!-- creating column 2 in row 1 -->
+                <td><b>MS Expression Web</b></td>
+                <td><b>VS Code Editor</b></td> <!-- creating column 2 in row 1 -->
+            </tr>
+            <tr> <!-- creating row 2 -->
+                <td><b>Purpose</b></td> <!-- creating column 1 in row 2 -->
+                <td>Web design and publishing</td> <!-- creating column 2 in row 2 -->
+                <td>Web design and publishing</td>
+                <td>Intergrated development</td>
+            </tr>
+            <tr> <!-- creating row 3 -->
+                <td><b>User Interface</b></td> <!-- creating column 1 in row 3 -->
+                <td>WYSIWYG Interface</td> <!-- creating column 2 in row 3 -->
+                <td>WYSIWYG Interface</td>
+                <td>IDE with code editor</td>
+            </tr>
+            <tr> <!-- creating row 4 -->
+                <td ><b>Features</b></td> <!-- creating column 1 in row 4 -->
+                <td>Basic web design tools</td>
+                <td>Advanced design features</td>
+                <td>Full development toolkit</td>
+            </tr>
+            <tr> <!-- creating row 5 -->
+                <td><b>Code Editing</b></td> <!-- creating column 1 in row 6 -->
+                <td>Limited code support</td>
+                <td>Improved code editing</td>
+                <td>Robust code enviroment</td>
+            </tr>
+            <tr> <!-- creating row 6 -->
+                <td><b>Visual Design</b></td> <!-- creating column 1 in row 6 -->
+                <td>Visual layout tools</td>
+                <td>Enhanced visual design</td>
+                <td>Focused on coding</td>
+            </tr>
+            <tr> <!-- creating row 7 -->
+                <td><b>Integration</b></td> <!-- creating column 1 in row 7 -->
+                <td>Limited integration</td>
+                <td>Better integration</td>
+                <td>Comprehensive integration</td>
+            </tr>
+            <tr> <!-- creating row 8 -->
+                <td><b>Progamming Languages</b></td> <!-- creating column 1 in row 8 -->
+                <td>HTML, and basic scripting</td>
+                <td>HTML, CSS, JavaScript</td>
+                <td>Multiple languages</td>
+            </tr>
+            <tr> <!-- creating row 9 -->
+                <td><b>Advanced Functionality</b></td> <!-- creating column 1 in row 9 -->
+                <td>Basic functionality</td>
+                <td>Rich interactive content</td>
+                <td>Full application support</td>
+            </tr>
+            <tr> <!-- creating row 10 -->
+                <td><b>Version Control</b></td> <!-- creating column 1 in row 10 -->
+                <td>Limited or none</td>
+                <td>Basic version control</td>
+                <td>Integrated version control</td>
+            </tr>
+            <tr> <!-- creating row 11 -->
+                <td><b>Target Audience</b></td> <!-- creating column 1 in row 11 -->
+                <td>Beginners</td>
+                <td>Intermediate to advanced</td>
+                <td>Developers and teams</td>
+            </tr>
+            </table>
+            <br><br><br>
+
+            <div style="border: 5px solid var(--black); border-radius: 10px; padding: 10px;">
+               <p>Key Definitions <span style="color: #3498db;">🔑</span>:</p>
+
+               <p>
+                  <span class="purple-bullet">&#8226;</span>
+                  WYSIWYG: A type of editing software that allows users to see and edit content in a form that 
+                  appears as it would when displayed on an interface, webpage, slide presentation, or printed 
+                  document. WYSIWYG is an acronym for "what you see is what you get."
+               </p>
+               <p>
+                  <span class="purple-bullet">&#8226;</span>
+                  HTML: HTML (Hypertext Markup Language) is a standard markup language used to structure and present 
+                  content on the World Wide Web. It uses a set of tags to define the elements of a web page, such as 
+                  headings, paragraphs, links, images, and more.
+               </p>
+               <p>
+                  <span class="purple-bullet">&#8226;</span>
+                  CSS:(Cascading Style Sheets) is a stylesheet language used to define the visual presentation and 
+                  layout of HTML elements on a web page, enabling designers to control aspects like fonts, colors, 
+                  spacing, and responsive design.               
+               </p>
+               <p>
+                  <span class="purple-bullet">&#8226;</span>
+                  JavaScript: A versatile programming language commonly used for adding interactivity and dynamic 
+                  behavior to web pages, allowing developers to create responsive and engaging user experiences.         
+               </p>
+           </div>
+           <br><br>
+
+           <p style="text-decoration: underline; text-decoration-color:var(--main-color); text-decoration-thickness: 2.5px;">What are the differences between HTML, CSS and JavaScript?</p>
+
+           <table class="custom-table"> <!-- Start of the table(14 rows, 4 columns) -->
+            <tr> <!-- creating row 1 -->
+                <td><b>Feature</b></td> <!-- creating column 1 in row 1 -->
+                <td><b>HTML</b></td> <!-- creating column 2 in row 1 -->
+                <td><b>CSS</b></td>
+                <td><b>JavaScript</b></td> <!-- creating column 2 in row 1 -->
+            </tr>
+            <tr> <!-- creating row 2 -->
+                <td><b>Purpose</b></td> <!-- creating column 1 in row 2 -->
+                <td>Defines structure</td> <!-- creating column 2 in row 2 -->
+                <td>Defines presentation</td>
+                <td>Adds interactivity and logic</td>
+            </tr>
+            <tr> <!-- creating row 3 -->
+                <td><b>Language Type</b></td> <!-- creating column 1 in row 3 -->
+                <td>Markup Language</td> <!-- creating column 2 in row 3 -->
+                <td>Style Sheet Language</td>
+                <td>Programming Language</td>
+            </tr>
+            <tr> <!-- creating row 4 -->
+                <td><b>Usage</b></td> <!-- creating column 1 in row 4 -->
+                <td>Structure of content</td>
+                <td>Presentation and styling</td>
+                <td>Client-side scripting</td>
+            </tr>
+            <tr> <!-- creating row 5 -->
+                <td><b>Syntax</b></td> <!-- creating column 1 in row 6 -->
+                <td>Consists of tags</td>
+                <td>Consists of selectors and properties</td>
+                <td>Consists of statements and functions</td>
+            </tr>
+            <tr> <!-- creating row 6 -->
+                <td><b>File Extension</b></td> <!-- creating column 1 in row 6 -->
+                <td>.html</td>
+                <td>.css</td>
+                <td>.js</td>
+            </tr>
+            <tr> <!-- creating row 7 -->
+                <td><b>Interactions</b></td> <!-- creating column 1 in row 7 -->
+                <td>Static content</td>
+                <td>Styling of elements</td>
+                <td>Dynamic behavior</td>
+            </tr>
+            <tr> <!-- creating row 8 -->
+                <td><b>Dependencies</b></td> <!-- creating column 1 in row 8 -->
+                <td>None</td>
+                <td>Relies of HTML structure</td>
+                <td>Can interact with both HTML and CSS</td>
+            </tr>
+            <tr> <!-- creating row 9 -->
+                <td><b>Execution Location</b></td> <!-- creating column 1 in row 9 -->
+                <td>Browser</td>
+                <td>Browser</td>
+                <td>Browser</td>
+            </tr>
+            <tr> <!-- creating row 10 -->
+                <td><b>Accessibility</b></td> <!-- creating column 1 in row 10 -->
+                <td>Primarily for content</td>
+                <td>Primarily for styling</td>
+                <td>Enhances user experience</td>
+            </tr>
+            <tr> <!-- creating row 11 -->
+                <td><b>Examples</b></td> <!-- creating column 1 in row 11 -->
+                <td>< div>, < p> , < a></td>
+                <td>"color: blue;, .class {}"</td>
+                <td>"document.getElementById(), addEventListener()"</td>
+            </tr>
+            <tr> <!-- creating row 12 -->
+                <td><b>Supported Actions</b></td> <!-- creating column 1 in row 12 -->
+                <td>None</td>
+                <td>None</td>
+                <td>Events handling, DOM manipulation, AJAX requests, etc.</td>
+            </tr>
+            <tr> <!-- creating row 13 -->
+                <td><b>Integration</b></td> <!-- creating column 1 in row 13 -->
+                <td>Integrated with CSS</td>
+                <td>Can be used with HTML</td>
+                <td>Can be used within HTML and CSS</td>
+            </tr>
+            <tr> <!-- creating row 14 -->
+                <td><b>Core Role</b></td> <!-- creating column 1 in row 14 -->
+                <td>Content structure</td>
+                <td>Styling and layout control</td>
+                <td>Behavior and interaction control</td>
+            </tr>
+            </table>
+        <p>These three technologies often work together to create web pages.</p>
+        <p>Remember! HTML defines the structure and content, CSS styles and formats that content, and 
+            JavaScript adds interactivity and dynamic behavior to the page.
+         </p>
+        <p style="text-align: justify;">
+            This section won't delve into the intricate process of building a site from the ground up; rather, 
+            I'm here to offer you a glimpse behind the digital curtain, revealing the very tools that brought 
+            it to life, should your curiosity be piqued &#128512; <!-- Grinning Face with Smiling Eyes emoji -->
+        </p><br><br><br>
+        <div style="text-align: center;">
+         <img src="images/pic-x6.svg" alt="" style="width: 330px;">
+      </div>
+      <br><br><br><br><br><br>
+
+        
+         <div class="content">
+            <h3>Introduction to Data Science</h3>
+            <p><span class="purple_text">Data Science: </span>the interdisciplinary field that involves collecting, analyzing, and deriving insights from data to solve complex problems, make informed decisions, and create predictive models using various techniques, including statistics, machine learning, and data visualization.</p>
+            <p>More content coming soon...</p>
+         </div>
+         <br><br>
+
+         <div class="content">
+            <h3>Introduction to Mobile App Development</h3>
+            <p><span class="purple_text">Mobile App Development: </span>the creation and maintenance of applications tailored for mobile devices, focusing on design, coding, and optimization to deliver a user-friendly experience on smartphones and tablets.</p>
+            <p>More content coming soon...</p>
+         </div>
+
+      </div>
+   
+
+   </div>
+
+</section> 
+
+<section class="reviews">
+
+   <h1 class="heading">student's reviews</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-2.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-3.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-4.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-5.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-6.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, suscipit a. Quibusdam, dignissimos consectetur. Sed ullam iusto eveniet qui aut quibusdam vero voluptate libero facilis fuga. Eligendi eaque molestiae modi?</p>
+         <div class="student">
+            <img src="images/pic-7.jpg" alt="">
+            <div>
+               <h3>john deo</h3>
+               <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+</section>
+
+<footer class="footer">
+
+   &copy; Copyright @ 2023 by <span>Akunna Tech Solutions</span> | All Rights Reserved
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+   
+</body>
+</html>
