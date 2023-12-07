@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akunna Onyekachi - Portfolio</title>
+    
+    <!--For linking stylesheet-->
+    <link rel="stylesheet" href="Portfolio_css.css">
+
+    <!--For favicon-->
+    <link rel = "icon" href ="https://images.unsplash.com/photo-1606139824527-1f1ac0e1743b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGRhcmslMjBncmVlbiUyMGxlYWZ8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="https://lh3.googleusercontent.com/a/ACg8ocIO9eW6Gp3vRajT5PZ1PHEWwFQB1u71FX4qxxsAN0zPxw=s389-c-no" class="logo"
+            style ="border-radius: 35%; border: 5px solid white;"> <!--Image of me-->
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer/Data Scientist</p>
+            <h1>Hi, I'm <span>Akunna</span><br>Onyekachi From NC</h1>
+        </div>
+    </div>
+</div>
+<!-- -----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm283-nunny-235-a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e667b82bff1fd2ec045c090b5e93886d"
+                height="120px">
+            </div> <!--green background image-->
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p style="text-align: justify;"> I am a Software Engineer (Full Stack) with Data Science Expertise, currently working as a freelancer under the business name, Akunna Tech Solutions. Originally from Nigeria, 
+                    my educational and professional journey started in North Carolina, driven by my pursuit of opportunities. I launched this portfolio website and a complementary <a href="http://www.akunnaguidebook.com" target="_blank" class="hyperlink_line">guidebook</a> 
+                    to educate others about web & mobile development and data science, while showcasing my projects and personal journey.
+                    My coding journey began during my undergraduate studies at UNC Chapel Hill, where I discovered my passion for geographic information systems (GIS) and urban data 
+                    analytics, which laid the foundations for my interest and devotion to data science and full stack development.
+                </p>
+                
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Science</span><br>Data Mining, Web Scraping and more</li>
+                        <li><span>Web App Development</span><br>Front-end and Back-end Development</li>
+                        <li><span>Mobile App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Current</span><br>Software Engineer and Data Scientist at Akunna Tech Solutions</li>
+                        <li><span>2023</span><br>Geospatial Data Engineer Intern at Durham Public Schools</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Current</span><br>MS in Information Science (App Development and Data Science Focused) at UNC Chapel Hill</li>
+                        <li><span>2019-2022</span><br>BS in Environmental Science (GIS Focused) from UNC Chapel Hill</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web App Dev</h2>
+                <p style="text-align: left;"> I specialize in crafting dynamic, user-friendly applications by seamlessly bridging front-end and server-side technologies. Additionally, I excel in database integration, tailoring solutions to meet unique project demands.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Data Science</h2>
+                <p style="text-align: left;">My data science services encompass a wide range of capabilities, from data mining and topic modeling to in-depth data analysis and web scraping. I offer a comprehensive suite of solutions to address diverse data-driven needs.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Mobile App Dev</h2>
+                <p style="text-align: left;">I have a niche in designing captivating, user-friendly mobile apps with a deep understanding of cutting-edge technologies, ensuring unique app ideas stand out in the competitive app landscape from concept to delivery.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4vdJMS3U_GA7NjO9-kfye5mtwSkWpXM4wg&usqp=CAU"
+                class= "work_img">
+                <div class="layer">
+                    <h3>Web App Projects</h3>
+                    <p style="text-align: justify">Click here to see a range of full stack web applications I built from scratch include an authentic looking college website, college application form, job application form and so much more... </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://media.istockphoto.com/id/1284524750/vector/data-processing-icon-in-vector-logotype.jpg?s=612x612&w=0&k=20&c=lw7l6zjWDkhmVbFHGtN9_TEDLxQlCCKigtjIpjW5tNQ="
+                class= "work_img">
+                <div class="layer">
+                    <h3>Data Science Projects</h3>
+                    <p style="text-align: justify">Explore a diverse collection of my data science projects by clicking below. These projects encompass a wide spectrum of data-driven solutions, from in-depth data analysis, topic modeling, and data mining to web scraping and more...</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://media.istockphoto.com/id/915795600/vector/smartphone-icon-vector.jpg?s=612x612&w=0&k=20&c=OsWrIwHaglej3kkndJXJdru87qbKRNv1H30mNWoXsnE="
+                class= "work_img"; id = "img_border">           
+                <div class="layer">
+                    <h3>Mobile App Projects</h3>
+                    <p style="text-align: justify">Experience my mobile app development expertise, featuring a range of Android and iOS applications. Whether it's utility apps, social platforms, or interactive tools, my portfolio showcases a diverse array of mobile solutions.</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a> <!--Would add link to guide book-->
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> akunna1mail@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> (919) 780 1919</p>
+                
+                <!--Social Media App Links-->  
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/akunna-onyekachi/" target="_blank">
+                        <img src="https://static.vecteezy.com/system/resources/previews/018/910/809/original/linkedin-logo-linkedin-symbol-linkedin-icon-free-free-vector.jpg" alt="LinkedIn"
+                        height="35px" width="35px" class="invert_img">
+                    </a>
+                    <a href="https://www.instagram.com/aku__nna/" target="_blank">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/new-Instagram-logo-black-glyph.png"
+                        height="30px" width="30px" class="invert_img">
+                    </a>             
+                    <a href="https://github.com/akunna1" target="_blank">
+                        <img src="https://github.githubassets.com/images/modules/open_graph/github-mark.png"
+                        height="30px" width="50px" class="invert_img">
+                    </a>                            
+                </div>  
+
+                <!--For resume download-->     
+                <a href="https://drive.google.com/file/d/1Yam-yaXYqsZWLUp6TDlJCQ9YIJUoYB06/view?usp=sharing" target="_blank" download class="btn btn2">Download Resume</a>
+            </div>
+
+            <!--For Message Section-->
+            <div class="contact-right">
+                <form name="submit-to-server" action="/submit-form" method="post">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2023 <span style="color: darkolivegreen;">Akunna Tech Solutions</span></p>
+    </div>
+</div>
+
+<!-- For linking js file -->
+<script src="Portfolio_js.js"></script>
+</body>
+</html>
