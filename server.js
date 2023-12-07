@@ -14,7 +14,7 @@ app.post('/submit-form', (req, res) => {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'xxxxxxxxx@gmail.com',
+      user: 'xxxxxxxxx@gmail.com', // hiding information
       pass: 'xxxxxxxxx',
     },
   });
