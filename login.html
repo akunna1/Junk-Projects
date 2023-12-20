@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Contact Me</title>
+   <title>Mobile App Projects</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
@@ -68,54 +68,25 @@
       <a href="about.html"><i class="fa-solid fa-handshake"></i><span>Introduction</span></a>
       <a href="courses.html"><i class="fa-solid fa-computer"></i><span>Web App Projects</span></a>
       <a href="teachers.html"><i class="fa-solid fa-code-branch"></i></i><span>Data Science Projects</span></a>
-      <a href="teacher_profile.html"><i class="fa-solid fa-mobile"></i><span>Mobile App Projects</span></a>
+      <a href="login.html"><i class="fa-solid fa-mobile"></i><span>Mobile App Projects</span></a>
    </nav>
 
 </div>
 
-<section class="contact">
+<section class="form-container">
 
-   <div class="row">
-
-      <div class="image">
-         <img src="images/contact-img.svg" alt="">
-      </div>
-
-      <form action="https://formsubmit.co/akunna1mail@gmail.com" method="POST"> <!-- linking formsubmit here-->
-         <h3>Get in touch</h3>
-         <input type="hidden" name="_subject" value="New Guidebook Website Message!">
-         <input type="text" placeholder="Enter your name" name="name" required maxlength="50" class="box">
-         <input type="email" placeholder="Enter your email" name="email" required maxlength="50" class="box">
-         <input type="hidden" name="_next" value="https://akunnaguidebook.com/register.html"> <!--need to deploy this guidebook before I can see this in action-->
-         <input type="number" placeholder="Enter your number" name="number" required maxlength="50" class="box">
-         <textarea name="msg" class="box" placeholder="Enter your message" required maxlength="1000" cols="30" rows="10"></textarea>
-         <input type="submit" value="send message" class="inline-btn" name="submit">
-      </form>
-
-   </div>
-
-   <div class="box-container">
-
-      <div class="box">
-         <i class="fas fa-phone"></i>
-         <h3>Phone Number</h3>
-         <a href="tel:9197801919">+1 919-780-1919</a>
-      </div>
-      
-      <div class="box">
-         <i class="fas fa-envelope"></i>
-         <h3>Email Address</h3>
-         <a href="mailto:akunna1mail@gmail.com">akunna1mail@gmail.com</a>
-      </div>
-
-   </div>
-
+   <form action="" method="post" enctype="multipart/form-data">
+      <h3>login now</h3>
+      <p>your email <span>*</span></p>
+      <input type="email" name="email" placeholder="enter your email" required maxlength="50" class="box">
+      <p>your password <span>*</span></p>
+      <input type="password" name="pass" placeholder="enter your password" required maxlength="20" class="box">
+      <input type="submit" value="login new" name="submit" class="btn">
+   </form>
 </section>
 
 <footer class="footer">
-
    &copy; Copyright @ 2023 by <span>Akunna Tech Solutions</span> | All Rights Reserved
-
 </footer>
 
 <!-- custom js file link  -->
