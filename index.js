@@ -1,23 +1,28 @@
+// ROUTING
 const express = require("express"); // Importing the Express framework and assigning it to the 'express' variable
 const app = express(); // Creating an instance of the Express application
+
 
 const port = 8083; // the server would listen to this port
 const path = require("path"); // Importing the 'path' module for working with file paths
 
+// DATABASE INTERACTIONS
 // Using google cloud to store resume and cover letter
 const { Storage } = require("@google-cloud/storage"); // Importing the Google Cloud Storage library and assigning it to 'Storage'
-
 const multer = require("multer"); // Importing the 'multer' library for handling file uploads
 const bodyParser = require("body-parser"); // Importing the 'body-parser' middleware for parsing HTTP request bodies
 
+// STATIC FILE SERVING
 // Defining the source directory for static files i.e term_project.html, term_project.js and term_project.css
 const src = path.join(__dirname, "front_end");
 app.use(express.static(src)); // Serving static files from the 'front_end' directory
 
+// FILE UPLOAD CONFIGURATION
 // Setting up 'Multer' to handle file uploads, using in-memory storage
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+// GOOGLE CLOUD STORAGE CONFIGURATION
 // Configuring Google Cloud Storage using project ID and key file
 let projectId = "akunna-project-1";
 let keyFilename = "mykey.json";
@@ -27,6 +32,7 @@ const storageClient = new Storage({
 });
 const bucket = storageClient.bucket("neptune-tech-proj"); // Specifying the name of the Google Cloud Storage bucket
 
+// FILE UPLOAD ROUTE
 // Defining a route to handle file uploads when a POST request is made to '/submit_application'
 app.post("/submit_application", upload.fields([{ name: "resume" }, { name: "cover_letter" }]), (req, res) => {
   // req.files contains the uploaded files
@@ -60,11 +66,12 @@ app.post("/submit_application", upload.fields([{ name: "resume" }, { name: "cove
     );
   }
 
+  // GOOGLE CLOUD STORAGE FILE UPLOAD
   // Uploading form data as a .txt file to Google Cloud Storage with a unique ID
   const uniqueId = uuidv4();
   const formDataFileName = `form_data_${uniqueId}.txt`;
-
   const formDataFile = bucket.file(formDataFileName);
+
   formDataFile.save(JSON.stringify(applicationData, null, 2), {
     metadata: {
       contentType: "text/plain" // Set content type to plain text
@@ -92,15 +99,18 @@ app.post("/submit_application", upload.fields([{ name: "resume" }, { name: "cove
   });
 });
 
+// BODY PARSER MIDDLEWARE
 // Using 'body-parser' middleware to parse URL-encoded and JSON request bodies
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// ROOT ROUTE
 // Defining a route for the root URL that serves 'term_project.html'
 app.get("/", (req, res) => {
   res.sendFile(path.join(src, "term_project.html"));
 });
 
+// SERVER START
 // Starting the server and listen on the specified port
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
